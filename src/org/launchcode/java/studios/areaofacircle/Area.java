@@ -6,9 +6,13 @@ public class Area {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter Radius: ");
                 Double radius = input.nextDouble();
-        System.out.println("The area of a circle of radius: " +radius + " is: " +Circle.getArea(radius));
+                if(radius<0){
+                    System.out.println("You have entered negative value ");
+                }
+                else {
+                    System.out.println("The area of a circle of radius: " + radius + " is: " + Circle.getArea(radius));
+                }
 
-        //The area of a circle of radius 2.5 is: 19.625
     }
 
 }
